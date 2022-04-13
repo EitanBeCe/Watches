@@ -1,5 +1,7 @@
 .catalog
     padding-bottom: 100px
+    h2
+        text-align: center
     &__tabs
         margin-top: 70px
         list-style-type: none
@@ -22,7 +24,7 @@
         transition: 0.5s all
         div
             transform: skewX(25deg)
-        &:active
+        &_active
             color: #fff
             background-color: $main-color
             border: none
@@ -30,10 +32,17 @@
             box-shadow: 3px 3px 20px $main-color
             border: none
     &__content
+        display: none
+        justify-content: space-between
+        flex-wrap: wrap
         margin-top: 60px
+        align-items: center
+        &_active
+            display: flex
     &-item
         width: 303px;
         min-height: 442px;
+        margin-bottom: 20px
         border: 2px solid #d0d0d0
         padding: 20px 20px 26px 20px
         overflow: hidden
@@ -88,15 +97,52 @@
             margin-right: 0px
             transform: translateX(-100%)
             transition: 0.5s all
-            &:active
+            &_active
                 transform: translateX(0%)
                 margin-right: 20px
         &__list
+            position: relative
             width: 50%    
             transform: translateX(0%)
             margin-left: 20px
             padding-right: 20px
             transition: 0.5s all
-            &:active
+            padding-left: 0
+            margin-bottom: 0
+            &_active
                 transform: translateX(-100%)    
-                margin-left: 0px            
+                margin-left: 0px  
+            ul
+                padding-left: 18px   
+            li
+                position: relative
+                font-weight: 300;
+                font-size: 14px;
+                color: #555555;    
+                margin-bottom: 15px   
+                list-style-type: none
+                &:before
+                    content: ''
+                    position: absolute
+                    width: 5px
+                    height: 5px
+                    background-color: $main-color
+                    left: -14px
+                    top: 7px
+        &__back
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(calc(-50% - 19px));
+            display: block;
+            color: $main-color;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: underline;
+            text-transform: uppercase;
+            &:hover
+                color: $main-color;
+
+
+
+                    
