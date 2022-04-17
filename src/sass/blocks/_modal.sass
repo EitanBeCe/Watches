@@ -1,0 +1,38 @@
+.overlay
+    display: none
+    position: fixed
+    top: 0
+    height: 100%
+    width: 100%
+    background: rgba(0, 0, 0, 0.4)
+.modal
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 382px;
+    min-height: 402px;
+    background: #F2F2F2;
+    padding: 40px
+    &__close
+        position: absolute
+        top: 0
+        right: -40px
+        color: $main-color
+        font-size: 41px
+        line-height: 21px
+        cursor: pointer
+    &__subtitle
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        text-align: center
+    &__descr
+        font-weight: 700;
+        font-size: 14px;
+        text-align: center
+    &_mini
+        min-height: 140px
+
+#consultation, #order, #thanks
+    display: none
